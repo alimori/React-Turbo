@@ -1,0 +1,259 @@
+/* theme.css */
+:root {
+  /* --- Core shadcn vars --- */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  /* Changed primary to a blue */
+  --primary: 210 60% 50%;
+  /* Example blue HSL */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 4.8% 95.9%;
+  /* Default secondary */
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+
+  /* --- Semantic colors --- */
+  --success: 142.1 70.6% 45.7%;
+  --error: 0 84.2% 60.2%;
+  --warning: 34.9 94.7% 52.2%;
+
+  /* --- Spacing --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+
+  /* --- Border Radius --- */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  /* This is what xs/sm use in buttonVariants */
+  --radius-lg: 0.75rem;
+
+  /* --- Font Sizes --- */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  /* ... (rest of your font sizes) ... */
+
+  /* --- NEW: Color Scales (50-950) --- */
+  /* Primary Scale (Blue) */
+  --primary-50: 210 80% 95%;
+  --primary-100: 210 75% 90%;
+  --primary-200: 210 70% 85%;
+  --primary-300: 210 65% 75%;
+  --primary-400: 210 60% 65%;
+  --primary-500: 210 60% 50%;
+  /* This is your primary.DEFAULT */
+  --primary-600: 210 55% 40%;
+  --primary-700: 210 50% 30%;
+  --primary-800: 210 45% 20%;
+  --primary-900: 210 40% 10%;
+  --primary-950: 210 35% 5%;
+
+  /* Secondary Scale */
+  --secondary-50: 240 50% 97%;
+  --secondary-100: 240 45% 94%;
+  --secondary-200: 240 40% 91%;
+  --secondary-300: 240 35% 88%;
+  --secondary-400: 240 30% 85%;
+  --secondary-500: 240 25% 80%;
+  /* This is your secondary.DEFAULT */
+  --secondary-600: 240 20% 70%;
+  --secondary-700: 240 15% 60%;
+  --secondary-800: 240 10% 50%;
+  --secondary-900: 240 5% 40%;
+  --secondary-950: 240 2% 30%;
+
+  /* Neutral Scale (Grayscale) */
+  --neutral-50: 0 0% 97%;
+  --neutral-100: 0 0% 94%;
+  --neutral-200: 0 0% 91%;
+  --neutral-300: 0 0% 88%;
+  --neutral-400: 0 0% 85%;
+  --neutral-500: 0 0% 80%;
+  /* Default neutral */
+  --neutral-600: 0 0% 70%;
+  --neutral-700: 0 0% 60%;
+  --neutral-800: 0 0% 50%;
+  --neutral-900: 0 0% 40%;
+  --neutral-950: 0 0% 30%;
+
+  /* Success Scale */
+  --success-50: 142 80% 95%;
+  --success-100: 142 75% 90%;
+  --success-200: 142 70% 85%;
+  --success-300: 142 65% 75%;
+  --success-400: 142 60% 65%;
+  --success-500: 142 70% 45.7%;
+  /* This is your success.DEFAULT */
+  --success-600: 142 65% 35%;
+  --success-700: 142 60% 25%;
+  --success-800: 142 55% 15%;
+  --success-900: 142 50% 10%;
+  --success-950: 142 45% 5%;
+
+  /* Error Scale */
+  --error-50: 0 90% 96%;
+  --error-100: 0 88% 93%;
+  --error-200: 0 86% 90%;
+  --error-300: 0 84% 85%;
+  --error-400: 0 82% 75%;
+  --error-500: 0 72% 50%;
+  /* This is your error.DEFAULT */
+  --error-600: 0 68% 40%;
+  --error-700: 0 64% 30%;
+  --error-800: 0 60% 20%;
+  --error-900: 0 56% 10%;
+  --error-950: 0 52% 5%;
+
+  /* Warning Scale */
+  --warning-50: 35 90% 96%;
+  --warning-100: 35 88% 93%;
+  --warning-200: 35 86% 90%;
+  --warning-300: 35 84% 85%;
+  --warning-400: 35 82% 75%;
+  --warning-500: 34.9 94.7% 52.2%;
+  /* This is your warning.DEFAULT */
+  --warning-600: 35 90% 45%;
+  --warning-700: 35 85% 35%;
+  --warning-800: 35 80% 25%;
+  --warning-900: 35 75% 15%;
+  --warning-950: 35 70% 10%;
+}
+
+/* --- Dark Mode --- */
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  /* Dark Primary (adjust to your preferred blue for dark mode) */
+  --primary: 210 70% 60%;
+  /* A slightly lighter, more vibrant blue for dark mode */
+  --primary-foreground: 240 10% 3.9%;
+  /* Dark foreground */
+  --secondary: 240 3.7% 26%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 26%;
+  --muted-foreground: 240 5.9% 60%;
+  --accent: 240 3.7% 26%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 45%;
+  --destructive-foreground: 0 86% 97%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --border: 240 3.7% 26%;
+  --input: 240 3.7% 26%;
+  --ring: 240 4.9% 83%;
+
+  /* Dark Semantic Colors (adjust if needed) */
+  /* Often kept same or slightly tweaked for contrast */
+  --success: 142.1 70.6% 45.7%;
+  --error: 0 84.2% 60.2%;
+  --warning: 34.9 94.7% 52.2%;
+
+
+  /* --- NEW: Dark Mode Color Scales --- */
+  /* Primary Scale (Blue) - Dark */
+  --primary-50: 210 80% 12%;
+  /* Darkest, for backgrounds */
+  --primary-100: 210 75% 18%;
+  --primary-200: 210 70% 25%;
+  --primary-300: 210 65% 35%;
+  --primary-400: 210 60% 45%;
+  /* Transition to darker shades */
+  --primary-500: 210 60% 55%;
+  /* primary.DEFAULT (dark mode) - balanced mid-tone */
+  --primary-600: 210 55% 70%;
+  /* First brighter step, for accents */
+  --primary-700: 210 50% 80%;
+  --primary-800: 210 45% 90%;
+  --primary-900: 210 40% 95%;
+  /* Very bright, for important highlights/text */
+  --primary-950: 210 35% 98%;
+  /* Brightest, for minimal highlights */
+
+
+  /* Secondary Scale - Dark */
+  --secondary-50: 240 20% 18%;
+  --secondary-100: 240 22% 22%;
+  --secondary-200: 240 24% 26%;
+  --secondary-300: 240 26% 30%;
+  --secondary-400: 240 28% 36%;
+  --secondary-500: 240 30% 42%;
+  /* secondary.DEFAULT (dark mode) */
+  --secondary-600: 240 35% 52%;
+  --secondary-700: 240 40% 62%;
+  --secondary-800: 240 45% 72%;
+  --secondary-900: 240 50% 82%;
+  --secondary-950: 240 55% 90%;
+
+
+  /* Neutral Scale (Grayscale) - Dark */
+  --neutral-50: 0 0% 10%;
+  --neutral-100: 0 0% 14%;
+  --neutral-200: 0 0% 18%;
+  --neutral-300: 0 0% 22%;
+  --neutral-400: 0 0% 28%;
+  --neutral-500: 0 0% 35%;
+  /* neutral.DEFAULT (dark mode) */
+  --neutral-600: 0 0% 45%;
+  --neutral-700: 0 0% 55%;
+  --neutral-800: 0 0% 65%;
+  --neutral-900: 0 0% 78%;
+  --neutral-950: 0 0% 88%;
+
+
+  /* Success Scale - Dark */
+  --success-50: 142 35% 18%;
+  --success-100: 142 40% 22%;
+  --success-200: 142 45% 27%;
+  --success-300: 142 50% 32%;
+  --success-400: 142 55% 38%;
+  --success-500: 142 70% 44%;
+  /* success.DEFAULT (dark mode) */
+  --success-600: 142 75% 55%;
+  --success-700: 142 80% 66%;
+  --success-800: 142 85% 78%;
+  --success-900: 142 90% 88%;
+  --success-950: 142 95% 94%;
+
+
+  /* Error Scale - Dark */
+  --error-50: 0 60% 15%;
+  --error-100: 0 65% 20%;
+  --error-200: 0 70% 25%;
+  --error-300: 0 75% 32%;
+  --error-400: 0 80% 40%;
+  --error-500: 0 85% 50%;
+  /* error.DEFAULT (dark mode) */
+  --error-600: 0 88% 60%;
+  --error-700: 0 90% 70%;
+  --error-800: 0 92% 80%;
+  --error-900: 0 94% 90%;
+  --error-950: 0 96% 95%;
+
+  
+  /* Warning Scale - Dark */
+  --warning-50: 35 45% 15%;
+  --warning-100: 35 50% 20%;
+  --warning-200: 35 55% 25%;
+  --warning-300: 35 60% 32%;
+  --warning-400: 35 70% 40%;
+  --warning-500: 35 85% 48%;
+  /* warning.DEFAULT (dark mode) */
+  --warning-600: 35 90% 58%;
+  --warning-700: 35 92% 70%;
+  --warning-800: 35 94% 80%;
+  --warning-900: 35 96% 90%;
+  --warning-950: 35 98% 94%;
+}
